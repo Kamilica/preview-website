@@ -102,13 +102,23 @@ body {
   width: 100%;
   background: #fff;
   z-index: 99999;
+  padding: 0 0 150px;
+  font-family: 'MyradPro Condensed';
 }
+
 .nav-collapse-items .d-flex ul {
   list-style: none;
   padding-left: 0;
 }
+.nav-collapse-items .d-flex ul a {
+  color: #808080;
+  font-size: 18px;
+}
+.nav-collapse-items .d-flex ul a:hover {
+  text-decoration: none;
+}
 #nav-item1 .d-flex ul {
-  margin-left: 45px;
+  margin-left: 50px;
 }
 #nav-item2 .d-flex ul {
   margin-left: 150px;
