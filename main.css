@@ -49,20 +49,6 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-@media (min-width: 1000px) {
-  .navigation-right .navbar-nav {
-    margin-left: auto;
-  }
-}
-@media (max-width: 999px) {
-  .navigation-right {
-    background-color: #0061af;
-  }
-  .navigation-right .navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 /* -------- Navigation with a Logo -------- */
 
 .default-nav .navbar-brand img {
@@ -102,13 +88,14 @@ body {
   width: 100%;
   background: #fff;
   z-index: 99999;
-  padding: 0 0 150px;
   font-family: 'MyradPro Condensed';
 }
-
+.nav-collapse-items img {
+  height: 100%;
+}
 .nav-collapse-items .d-flex ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0 0 100px 0;
 }
 .nav-collapse-items .d-flex ul a {
   color: #808080;
@@ -124,6 +111,56 @@ body {
   margin-left: 150px;
 }
 
+/* -------- Mobile Navigation -------- */
+/* needed */
+.mobile-navbar .navbar-brand img {
+  max-height: 50px;
+}
+.mobile-navbar  {
+  font-family: 'MyradPro Condensed';
+}
+.mobile-navbar .navbar-collapse {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  z-index: 999999;
+}
+.mobile-navbar .navbar-nav {
+  background-color: #0061af;
+  width: 290px;
+  float: right;
+  padding: 10px 0 30px;
+}
+.mobile-navbar .nav-item {
+  padding-left: 30px;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.mobile-navbar .nav-item ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: normal;
+  font-size: 18px;
+}
+.mobile-navbar .nav-item a {
+  color: #fff;
+  padding-left: 30px;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+@media (max-width: 1000px) {
+  .navbar-container {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
 
 /* -------- Hero Carousel -------- */
 
@@ -435,6 +472,21 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigation-right .navbar-nav {
+    margin-left: auto;
+  }
+}
+@media (max-width: 999px) {
+  .navigation-right {
+    background-color: #0061af;
+  }
+  .navigation-right .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
