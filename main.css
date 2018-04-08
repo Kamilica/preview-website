@@ -551,6 +551,12 @@ body {
   }
 }
 
+@media (max-width:767px) {
+  .time-and-temp {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 370px) {
   .navbar-brand, .navbar-toggler {
     margin: 0 auto;
@@ -578,6 +584,24 @@ body {
 
 .page-content {
   padding: 50px 0 200px;
+}
+.page-content .breadcrumb {
+  background-color: transparent;
+}
+.page-content .breadcrumb-item {
+  font-size: 18px;
+}
+.page-content .breadcrumb-item a {
+  color: #808080;
+}
+.page-content .breadcrumb-item a:hover {
+  text-decoration: none;
+}
+.page-content .breadcrumb-item+.breadcrumb-item::before {
+  content: '>';
+}
+.page-content .breadcrumb-item.active {
+  color: #ffa70c;
 }
 
 .time-and-temp {
