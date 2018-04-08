@@ -1,18 +1,35 @@
 @font-face {
-  font-family: 'MyradPro';
+  font-family: 'MyradPro Condensed';
+  src: url('fonts/Myriad-Pro-Condensed.ttf');
+}
+
+/* The correct font for Navigation */
+
+@font-face {
+  font-family: 'MyradPro SemiCondensed';
   src: url('fonts/Myriad Pro SemiCondensed.otf');
 }
 
-body,html {
+@font-face {
+  font-family: 'MyradPro SemiBold';
+  src: url('fonts/Myriad Pro Semibold Condensed.otf');
+}
+
+body, html {
   overflow-x: hidden;
 }
+
 body {
-  font-family: 'MyradPro';
+  font-family: 'MyradPro SemiCondensed';
 }
 
 /* -------- Navigation -------- */
 
 /* -------- Blue Navbar -------- */
+
+.navbar {
+  font-family: 'MyradPro Condensed';
+}
 
 .navigation-right .navbar-nav {
   background-color: #0061af;
@@ -32,15 +49,20 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-/*.navigation-right .nav-item:nth-child(4) .nav-link {
-  background-color: #fff;
-  color: #0061af;
-  border-radius: 50%;
-  height: 1.5em;
-  width: 1.5em;
-  /* text-align: center;
-}*/
-
+@media (min-width: 1000px) {
+  .navigation-right .navbar-nav {
+    margin-left: auto;
+  }
+}
+@media (max-width: 999px) {
+  .navigation-right {
+    background-color: #0061af;
+  }
+  .navigation-right .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* -------- Navigation with a Logo -------- */
 
 .default-nav .navbar-brand img {
@@ -67,16 +89,39 @@ body {
 
 .default-nav .nav-link {
   color: #808080;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: lighter;
 }
+
+/* needed */
+.default-nav .navbar-container {
+  border-bottom: 1px solid #ededed;
+}
+.nav-collapse-items {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  z-index: 99999;
+}
+.nav-collapse-items .d-flex ul {
+  list-style: none;
+  padding-left: 0;
+}
+#nav-item1 .d-flex ul {
+  margin-left: 45px;
+}
+#nav-item2 .d-flex ul {
+  margin-left: 150px;
+}
+
 
 /* -------- Hero Carousel -------- */
 
-#hero-slider {
+#carouselExampleIndicators {
   margin-bottom: 30px;
 }
 
-#hero-slider .carousel-indicators {
+#carouselExampleIndicators .carousel-indicators {
   top: 30px;
   justify-content: flex-start;
   margin: 0;
@@ -334,12 +379,15 @@ body {
 .blue-menu ul {
   list-style: none;
 }
+
 .blue-menu h6 {
   font-weight: 600;
 }
+
 .blue-menu li {
   line-height: 1.2;
 }
+
 /* -------- Text Containers -------- */
 
 .footer {
@@ -384,9 +432,9 @@ body {
   .default-nav {
     padding-top: 20px;
   }
-  .navigation-right {
+  /*.navigation-right {
     display: none;
-  }
+  }*/
   .gray-container .col-lg-6 {
     margin-bottom: 20px;
   }
@@ -400,6 +448,7 @@ body {
     margin-bottom: 20px;
   }
 }
+
 @media (min-width: 992px) {
   /* blue footer */
   .blue-menu .col-lg-1 {
@@ -444,4 +493,140 @@ body {
   .navbar-brand, .navbar-toggler {
     margin: 0 auto;
   }
+}
+
+/* --------------------- Page 1 --------------------- */
+
+.header-hero {
+  background-image: url('img/slide-2.png');
+  height: 270px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 15rem 25rem rgba(0, 0, 0, 0.6);
+  padding-top: 50px;
+}
+
+.header-hero h2 {
+  color: #ffa70c;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* -------- Page Content -------- */
+
+.page-content {
+  padding: 50px 0 200px;
+}
+
+.time-and-temp {
+  background: #e6e6e6;
+  border: 1px solid #999999;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+}
+
+.time-and-temp h5 {
+  color: #808080;
+  font-size: 22px;
+}
+
+.page-content .page-content-text h5 {
+  color: #f5821f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-content .page-content-text p {
+  color: #000;
+}
+
+.page-content .col-lg-6 h6 {
+  color: #fcaf18;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.page-content .youtube-section h5 {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* --------------------- Page 2 & Page 3 --------------------- */
+
+.accordion-section .btn-primary {
+  padding: 12px 30px;
+}
+
+#accordion-page .card {
+  margin-bottom: 10px;
+}
+.accordion-section .accordion-header {
+  background: #808080;
+  color: #fff;
+  transition: all 0.5s;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.accordion-section .accordion-header:hover {
+  background: #808080;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.accordion-section .collapsed {
+  background: #bbbdbe;
+}
+
+#accordion-page .col-4 h5 {
+  color: #f5821f;
+  font-weight: bold;
+  font-size: 22px;
+}
+#accordion-page .col-4 ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* --------------------- Page 3 --------------------- */
+.schedule-page .card h4, .schedule-page .card h6 {
+color: #f5821f;
+font-size: 16px;
+}
+.schedule-page .card p span {
+color: #fcaf18;
+}
+.schedule-page .card a {
+color: #0061af;
+}
+.schedule-page .card a:hover, .members-page .d-flex a {
+  text-decoration: none;
+}
+.schedule-page .card a.collapsed, .members-page .d-flex a.collapsed {
+  background: none;
+}
+
+/* --------------------- Page 4 --------------------- */
+.members-page h5 {
+  color: #f5821f;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.members-page img {
+  height: 100%;
+}
+.members-page p {
+  color: #000;
+}
+.members-page h6 {
+  color: #fcaf18;
+  font-size: 22px;
+  font-weight: bold;
+}
+.members-page .collapse-wrap {
+  border: 2px solid #bbbdbe;
+  padding: 7px;
 }
