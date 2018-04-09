@@ -110,6 +110,12 @@ body {
 #nav-item2 .d-flex ul {
   margin-left: 150px;
 }
+#nav-item3 .d-flex ul {
+  margin-left: 260px;
+}
+#nav-item4 .d-flex ul {
+  margin-left: 370px;
+}
 
 /* -------- Mobile Navigation -------- */
 /* needed */
