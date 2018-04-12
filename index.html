@@ -9,7 +9,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- For Carousel Swipe -->
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
   <!-- Fonts -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
@@ -24,8 +27,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">FAQ</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-4">
           <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">esp</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">por</a>
+        </li>
+        <li class="nav-item language-link mr-4">
+          <a class="nav-link" href="#">eng</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><span><i class="fab fa-twitter"></i></span></a>
@@ -75,7 +87,7 @@
   <div class="collapse nav-collapse-items" id="nav-item1">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Alacero-58</a>
@@ -93,13 +105,13 @@
             <a href="#">Congresos Anteriores</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <div class="collapse nav-collapse-items" id="nav-item2">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Programa</a>
@@ -126,14 +138,13 @@
             <a href="#">Concurso Arquitectura</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item3">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -148,14 +159,13 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item4">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -170,307 +180,308 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <!-- Main Nav END -->
 
+
+  <div id="mySidenav" class="sidenav">
+    <ul class="navbar-nav text-left">
+      <li class="nav-item">
+        <a class="nav-link pb-0" href="#">
+        X CERRAR
+      </a>
+      </li>
+      <div class="dropdown-divider mt-2"></div>
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+    </ul>
+  </div>
+  <!-- /.sidenav -->
   <nav class="navbar mobile-navbar">
-    <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMobile">
-      <ul class="navbar-nav text-left">
-        <li class="nav-item">
-          <a class="nav-link pb-0" href="#">
-            X CERRAR
-          </a>
-        </li>
-        <div class="dropdown-divider"></div>
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-      </ul>
-    </div>
+    <a class="navbar-brand mr-auto" href="#"><img src="img/logo-2.png" /></a>
+    <span class="navbar-toggler-icon open-close"></span>
   </nav>
   <!--- NAVIGATION END HERE -->
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-    <div class="container position-relative">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-  </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="img/slide-1.png" alt="First slide">
-        <div class="carousel-caption">
-          <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
-          <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
-          <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-        </div>
-      </div>
 
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/slide-2.png" alt="Second slide">
-        <div class="carousel-caption">
-          <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
-          <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
-          <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-        </div>
+  <div id="main">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="container position-relative">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
       </div>
-
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/slide-1.png" alt="Third slide">
-        <div class="carousel-caption">
-          <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
-          <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
-          <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/slide-2.png" alt="Fourth slide">
-        <div class="carousel-caption">
-          <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
-          <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
-          <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.carousel -->
-
-  <div class="container-fluid section-container section_one text-center">
-    <div class="section_text">
-      <h5>Conozca nuestros conferencistas</h5>
-      <p>
-        Destacadas personalidades analizarán el acontecerd <br />de la industria del acero y su entorno
-      </p>
-      <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-    </div>
-  </div>
-  <!--/.container-fluid -->
-
-  <div class="container-fluid section-container section_two text-center">
-    <div class="section_text">
-      <h5>Revisa las últimas novedades de Alacero-59</h5>
-      <p>
-        REVISA LAS ÚLTIMAS ACTUALIACIÓN DEL EVENTO
-      </p>
-      <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
-    </div>
-  </div>
-  <!--/.container-fluid -->
-
-  <div class="container box-container">
-    <h2 class="text-center">Planifique su viaje</h2>
-    <div class="row justify-content-around">
-      <div class="col-lg-2 col-xs-13 box">
-        <div class="box-wrap text-center d-flex align-items-center justify-content-center">
-          <h5>ALOJAMIENTO</h5>
-        </div>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div class="col-lg-2 box">
-        <div class="box-wrap text-center d-flex align-items-center justify-content-center">
-          <h5>CONVENIO AÉREO</h5>
-        </div>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div class="col-lg-2 box">
-        <div class="box-wrap text-center d-flex align-items-center justify-content-center">
-          <h5>TRASLADO AEROPUERTO/ HOTEL</h5>
-        </div>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div class="col-lg-2 box">
-        <div class="box-wrap text-center d-flex align-items-center justify-content-center">
-          <h5>CARTAGENA DE INDIAS</h5>
-        </div>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div class="col-lg-2 box">
-        <div class="box-wrap text-center d-flex align-items-center justify-content-center">
-          <h5>CLIMA</h5>
-        </div>
-      </div>
-      <!-- /.col-lg-2 -->
-    </div>
-    <!-- /.row -->
-    <h2 class="text-center">Alacero agradece la colaboración de <br />sus sponsors en el Congreso Alacero-59</h2>
-    <div class="row justify-content-around logo-container">
-      <div>
-        <img src="img/arcelormittal.png" />
-      </div>
-      <div>
-        <img src="img/ternium.png" />
-      </div>
-      <div>
-        <img src="img/gerdau.png" />
-      </div>
-      <div>
-        <img src="img/iberdrola.png" />
-      </div>
-      <div>
-        <img src="img/autlan.png" />
-      </div>
-      <div>
-        <img src="img/heavymovement.png" />
-      </div>
-      <div>
-        <img src="img/alacero.png" />
-      </div>
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.box-container -->
-
-  <div class="gray-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pl-md-0">
-          <div class="h-100">
-            <h5>Comunicados de Prensa</h5>
-            <p><a href="#">Positivo cierre del mercado siderúrgico latinoamericano durante el 2017 <i class="fas fa-arrow-right"></i></a></p>
-            <p class="mb-0"><a href="#">América Latina: Exportaciones chinas de acero disminuyen 8% mientras que precio promedio crece 33% en 2017 <i class="fas fa-arrow-right"></i></a></p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/slide-1.png" alt="First slide">
+          <div class="carousel-caption">
+            <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
+            <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
+            <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
           </div>
         </div>
-        <!-- /.col-lg-6 -->
-        <div class="col-lg-6 pr-md-0">
-          <div class="h-100">
-            <h5>Nuestra opinión</h5>
-            <p><a href="#">El reto de la región <i class="fas fa-arrow-right"></i></a></p>
+
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slide-2.png" alt="Second slide">
+          <div class="carousel-caption">
+            <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
+            <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
+            <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
           </div>
         </div>
-        <!-- /.col-lg-6 -->
+
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slide-1.png" alt="Third slide">
+          <div class="carousel-caption">
+            <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
+            <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
+            <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/slide-2.png" alt="Fourth slide">
+          <div class="carousel-caption">
+            <h5>Alacero-59 <br />Congreso Latinoamericano del Acero</h5>
+            <p>CENTRO DE CONVENCIONES CARTAGENA DE INDIAS, <br />COLOMBIA NOVIEMBRE 05-07, 2018</p>
+            <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- /.gray-container -->
+    <!-- /.carousel -->
 
-  <div class="container text-container">
-    <h4>AMÉRICA LATINA EN 2017:</h2>
+    <div class="container-fluid section-container section_one text-center">
+      <div class="section_text">
+        <h5>Conozca nuestros conferencistas</h5>
+        <p>
+          Destacadas personalidades analizarán el acontecerd <br />de la industria del acero y su entorno
+        </p>
+        <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
+      </div>
+    </div>
+    <!--/.container-fluid -->
+
+    <div class="container-fluid section-container section_two text-center">
+      <div class="section_text">
+        <h5>Revisa las últimas novedades de Alacero-59</h5>
+        <p>
+          REVISA LAS ÚLTIMAS ACTUALIACIÓN DEL EVENTO
+        </p>
+        <a href="#" class="btn btn-primary border-0">MÁS INFORMACIÓN</a>
+      </div>
+    </div>
+    <!--/.container-fluid -->
+
+    <div class="container box-container">
+      <h2 class="text-center">Planifique su viaje</h2>
+      <div class="row justify-content-around">
+        <div class="col-lg-2 col-xs-13 box">
+          <div class="box-wrap text-center d-flex align-items-center justify-content-center">
+            <h5><a href="#">ALOJAMIENTO</a></h5>
+          </div>
+        </div>
+        <!-- /.col-lg-2 -->
+        <div class="col-lg-2 box">
+          <div class="box-wrap text-center d-flex align-items-center justify-content-center">
+            <h5><a href="#">CONVENIO AÉREO</a></h5>
+          </div>
+        </div>
+        <!-- /.col-lg-2 -->
+        <div class="col-lg-2 box">
+          <div class="box-wrap text-center d-flex align-items-center justify-content-center">
+            <h5><a href="#">TRASLADO AEROPUERTO/ HOTEL</a></h5>
+          </div>
+        </div>
+        <!-- /.col-lg-2 -->
+        <div class="col-lg-2 box">
+          <div class="box-wrap text-center d-flex align-items-center justify-content-center">
+            <h5><a href="#">CARTAGENA DE INDIAS</a></h5>
+          </div>
+        </div>
+        <!-- /.col-lg-2 -->
+        <div class="col-lg-2 box">
+          <div class="box-wrap text-center d-flex align-items-center justify-content-center">
+            <h5><a href="#">CLIMA</a></h5>
+          </div>
+        </div>
+        <!-- /.col-lg-2 -->
+      </div>
+      <!-- /.row -->
+      <h2 class="text-center">Alacero agradece la colaboración de <br />sus sponsors en el Congreso Alacero-59</h2>
+      <div class="row justify-content-around logo-container">
+        <div>
+          <a href="#"><img src="img/arcelormittal.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/ternium.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/gerdau.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/iberdrola.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/autlan.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/heavymovement.png" /></a>
+        </div>
+        <div>
+          <a href="#"><img src="img/alacero.png" /></a>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.box-container -->
+
+    <div class="gray-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 pl-md-0">
+            <div class="h-100">
+              <h5>Comunicados de Prensa</h5>
+              <p><a href="#">Positivo cierre del mercado siderúrgico latinoamericano durante el 2017 <i class="fas fa-arrow-right"></i></a></p>
+              <p class="mb-0"><a href="#">América Latina: Exportaciones chinas de acero disminuyen 8% mientras que precio promedio crece 33% en 2017 <i class="fas fa-arrow-right"></i></a></p>
+            </div>
+          </div>
+          <!-- /.col-lg-6 -->
+          <div class="col-lg-6 pr-md-0">
+            <div class="h-100">
+              <h5>Nuestra opinión</h5>
+              <p><a href="#">El reto de la región <i class="fas fa-arrow-right"></i></a></p>
+            </div>
+          </div>
+          <!-- /.col-lg-6 -->
+        </div>
+      </div>
+    </div>
+    <!-- /.gray-container -->
+
+    <div class="container text-container">
+      <h4>AMÉRICA LATINA EN 2017:</h2>
     <div class="row justify-content-around">
       <div class="col-lg-2 box-text">
           <h5>63,9</h5>
@@ -512,19 +523,19 @@
           <h6>CONGRESO</h6>
           <ul class="pl-0">
             <li>
-              Alacero-58
+              <a href="#">Alacero-58</a>
             </li>
             <li>
-              Sponsors
+              <a href="#">Sponsors</a>
             </li>
             <li>
-              Comisión Organizadora
+              <a href="#">Comisión Organizadora</a>
             </li>
             <li>
-              Últimas Novedades
+              <a href="#">Últimas Novedades</a>
             </li>
             <li>
-              Congresos Anteriores
+              <a href="#">Congresos Anteriores</a>
             </li>
           </ul>
         </div>
@@ -532,28 +543,28 @@
           <h6>ACTIVIDADES</h6>
           <ul class="pl-0">
             <li>
-              Programa
+              <a href="#">Programa</a>
             </li>
             <li>
-              Conferencistas
+              <a href="#">Conferencistas</a>
             </li>
             <li>
-              ExpoAlacero 2018
+              <a href="#">ExpoAlacero 2018</a>
             </li>
             <li>
-              Cena Anual
+              <a href="#">Cena Anual</a>
             </li>
             <li>
-              Programa Acompañantes
+              <a href="#">Programa Acompañantes</a>
             </li>
             <li>
-              Visitas Industriales
+              <a href="#">Visitas Industriales</a>
             </li>
             <li>
-              Comités y Directorio
+              <a href="#">Comités y Directorio</a>
             </li>
             <li>
-              Concurso Arquitectura
+              <a href="#">Concurso Arquitectura</a>
             </li>
           </ul>
         </div>
@@ -561,16 +572,16 @@
           <h6>INSCRIPCIÓN</h6>
           <ul class="pl-0">
             <li>
-              Delegado Extranjero
+              <a href="#">Delegado Extranjero</a>
             </li>
             <li>
-              Delegado Local
+              <a href="#">Delegado Local</a>
             </li>
             <li>
-              Empresas
+              <a href="#">Empresas</a>
             </li>
             <li>
-              Participantes
+              <a href="#">Participantes</a>
             </li>
           </ul>
         </div>
@@ -578,10 +589,10 @@
           <h6>SEDE</h6>
           <ul class="pl-0">
             <li>
-              Centro de Convenciones
+              <a href="#">Centro de Convenciones</a>
             </li>
             <li>
-              Cartagena de Indias
+              <a href="#">Cartagena de Indias</a>
             </li>
           </ul>
         </div>
@@ -589,10 +600,10 @@
           <h6>ALOJAMIENTO</h6>
           <ul class="pl-0">
             <li>
-              Hotel Sede
+              <a href="#">Hotel Sede</a>
             </li>
             <li>
-              Hotel de Apoyo
+              <a href="#">Hotel de Apoyo</a>
             </li>
           </ul>
         </div>
@@ -600,13 +611,13 @@
           <h6>VIAJE</h6>
           <ul class="pl-0">
             <li>
-              Convenio Aéreo
+              <a href="#">Convenio Aéreo</a>
             </li>
             <li>
-              Traslado Aeropuerto/
+              <a href="#">Traslado Aeropuerto/</a>
             </li>
             <li>
-              Hotel
+              <a href="#">Hotel</a>
             </li>
           </ul>
         </div>
@@ -614,13 +625,13 @@
           <h6>PRENSA</h6>
           <ul class="pl-0">
             <li>
-              Inscripción
+              <a href="#">Inscripción</a>
             </li>
             <li>
-              Comunicados
+              <a href="#">Comunicados</a>
             </li>
             <li>
-              de Prensa
+              <a href="#">de Prensa</a>
             </li>
           </ul>
         </div>
@@ -631,10 +642,10 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-6">
+        <div class="col-lg-8">
           <img src="img/logo.png" />
         </div> <!-- /.col-lg-8 -->
-        <div class="col-lg-4 col-6 text-right">
+        <div class="col-lg-4 col-12 text-right">
           <div class="row">
             <div class="col-6">
               <a href="#">alacero.org</a>
@@ -652,6 +663,34 @@
       </div> <!-- /.row -->
     </div>
   </footer>
+</div> <!-- /.main -->
+
+<!-- Carousel Swipe -->
+  <script>
+  $('.carousel').each(function () {
+        var $carousel = $(this);
+        var hammertime = new Hammer(this, {
+            recognizers: [
+                [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
+            ]
+        });
+        hammertime.on('swipeleft', function () {
+            $carousel.carousel('next');
+        });
+        hammertime.on('swiperight', function () {
+            $carousel.carousel('prev');
+        });
+    });
+  </script>
+
+    <!-- SLide in Navbar -->
+    <script>
+    $('.open-close').on('click', function() {
+      $(this).children().toggleClass('active');
+      $('#mySidenav').toggleClass('active');
+      $('#main').toggleClass('active-content');
+    });
+    </script>
 </body>
 
 </html>

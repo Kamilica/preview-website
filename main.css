@@ -1,18 +1,34 @@
+/* Buttons Font */
+
+@font-face {
+  font-family: 'MyradPro SemiBold Condensed';
+  src: url('fonts/MYRIADPRO-SEMIBOLDCOND.OTF');
+}
+
+/* Navigation Font */
+
 @font-face {
   font-family: 'MyradPro Condensed';
-  src: url('fonts/Myriad-Pro-Condensed.ttf');
+  src: url('fonts/MYRIADPRO-COND.OTF');
 }
 
-/* The correct font for Navigation */
+/* Headers Font */
 
 @font-face {
-  font-family: 'MyradPro SemiCondensed';
-  src: url('fonts/Myriad Pro SemiCondensed.otf');
+  font-family: 'MyradPro Bold';
+  src: url('fonts/MYRIADPRO-BOLD.OTF');
+}
+
+/* SUbheaders Font */
+
+@font-face {
+  font-family: 'MyradPro Bold Cond';
+  src: url('fonts/MYRIADPRO-BOLDCOND.OTF');
 }
 
 @font-face {
-  font-family: 'MyradPro SemiBold';
-  src: url('fonts/Myriad Pro Semibold Condensed.otf');
+  font-family: 'MyradPro Bold Cond';
+  src: url('fonts/MYRIADPRO-BLACKCOND.OTF');
 }
 
 body, html {
@@ -34,6 +50,7 @@ body {
 .navigation-right .navbar-nav {
   background-color: #0061af;
   padding: 7px 25px;
+  letter-spacing: 1px;
 }
 
 .navigation-right .nav-link {
@@ -41,8 +58,24 @@ body {
   font-weight: 400;
 }
 
-.navigation-right .nav-item:nth-child(-n+3) {
-  margin-right: 25px;
+.language-link .nav-link {
+  padding: 3px 5px 3px;
+  background: #fff;
+  color: #f5821f;
+  margin-top: 8px;
+  border-radius: 7px;
+  line-height: unset;
+  text-transform: uppercase;
+  transition: 0.3s all;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.language-link .nav-link:hover {
+  background: #f5821f;
+  color: #fff;
 }
 
 .navbar-toggler-icon {
@@ -79,10 +112,10 @@ body {
   font-weight: lighter;
 }
 
-/* needed */
 .default-nav .navbar-container {
   border-bottom: 1px solid #ededed;
 }
+
 .nav-collapse-items {
   position: absolute;
   width: 100%;
@@ -90,78 +123,109 @@ body {
   z-index: 99999;
   font-family: 'MyradPro Condensed';
 }
+
 .nav-collapse-items img {
   height: 100%;
 }
+
 .nav-collapse-items .d-flex ul {
   list-style: none;
   padding: 0 0 100px 0;
 }
+
 .nav-collapse-items .d-flex ul a {
   color: #808080;
   font-size: 18px;
 }
+
 .nav-collapse-items .d-flex ul a:hover {
   text-decoration: none;
 }
+
 #nav-item1 .d-flex ul {
   margin-left: 50px;
 }
+
 #nav-item2 .d-flex ul {
   margin-left: 150px;
 }
+
 #nav-item3 .d-flex ul {
   margin-left: 260px;
 }
+
 #nav-item4 .d-flex ul {
   margin-left: 370px;
 }
 
 /* -------- Mobile Navigation -------- */
-/* needed */
+
+#mySidenav.active {
+  width: 300px;
+}
+
+#main.active-content {
+  margin-left: -300px;
+}
+
+#main {
+  transition: margin-left .5s;
+  position: static;
+}
 .mobile-navbar .navbar-brand img {
   max-height: 50px;
 }
-.mobile-navbar  {
-  font-family: 'MyradPro Condensed';
-}
-.mobile-navbar .navbar-collapse {
+
+.sidenav {
+  height: auto;
+  width: 0;
   position: absolute;
+  z-index: 1;
+  top: 130px;
   right: 0;
-  top: 75px;
-  z-index: 999999;
-}
-.mobile-navbar .navbar-nav {
   background-color: #0061af;
-  width: 290px;
-  float: right;
-  padding: 10px 0 30px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
 }
-.mobile-navbar .nav-item {
+
+.sidenav a {
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .nav-item {
   padding-left: 30px;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 0;
+  font-family: 'MyradPro Bold Cond';
 }
-.mobile-navbar .nav-item ul {
+
+.sidenav .nav-item ul {
   list-style: none;
   padding-left: 0;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 17px;
+  font-family: 'MyradPro Condensed';
+  line-height: 1.1;
 }
-.mobile-navbar .nav-item a {
+
+.sidenav .nav-item a {
   color: #fff;
   padding-left: 30px;
 }
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
+
 @media (max-width: 1000px) {
   .navbar-container {
     display: none;
   }
 }
+
 @media (min-width: 1000px) {
   .mobile-navbar {
     display: none;
@@ -223,15 +287,17 @@ body {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 25px;
+  font-family: 'MyradPro Bold';
 }
 
 .carousel-caption p {
   color: #fff;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 50px;
+  font-family: 'MyradPro Bold Cond';
 }
 
 /* -------- Homepage Button -------- */
@@ -239,10 +305,11 @@ body {
 .btn-primary {
   background: linear-gradient(#f6851e, #fcad18);
   color: #fff;
-  padding: 15px 20px;
+  padding: 15px 35px;
   font-size: 18px;
   border-radius: 7px;
   transition: background-color 0.5s ease;
+  font-family: 'MyradPro SemiBold Condensed';
 }
 
 .btn-primary:hover {
@@ -274,16 +341,18 @@ body {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 25px;
+  font-family: 'MyradPro Bold';
 }
 
 .section_text p {
   color: #fff;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 50px;
   text-transform: uppercase;
+  font-family: 'MyradPro Bold Cond';
 }
 
 /* -------- 5 Boxes -------- */
@@ -301,6 +370,7 @@ body {
   font-size: 26px;
   letter-spacing: 1px;
   font-weight: 600;
+  font-family: 'MyradPro Bold';
 }
 
 .box-container h2:nth-child(1) {
@@ -345,11 +415,16 @@ body {
   padding: 10px;
 }
 
-.box-wrap h5 {
+.box-wrap h5 a {
   color: #fff;
   font-size: 24px;
   font-weight: bolder;
   letter-spacing: 1px;
+  font-family: 'MyradPro Bold Cond';
+}
+
+.box-wrap h5 a:hover {
+  text-decoration: none;
 }
 
 /* -------- Logos -------- */
@@ -357,10 +432,6 @@ body {
 .logo-container img {
   max-height: 50px;
 }
-
-/*.logo-container img:not(:last-child) {
-  margin-right: 40px;
-}*/
 
 /* -------- Gray Container -------- */
 
@@ -378,12 +449,14 @@ body {
   color: #0061af;
   font-size: 24px;
   font-weight: bold;
+  font-family: 'MyradPro Bold';
 }
 
 .gray-container .col-lg-6 a {
   color: #4d4d4d;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 1.3;
+  font-family: 'MyradPro Bold Cond';
 }
 
 .gray-container .col-lg-6 a:hover {
@@ -398,9 +471,12 @@ body {
 }
 
 .text-container h4 {
-  font-size: 14px;
+  font-size: 17px;
+  letter-spacing: 1.3;
   color: #000;
   font-weight: bold;
+  font-family: 'MyradPro Bold Cond';
+  margin-bottom: 15px;
 }
 
 .box-text {
@@ -413,12 +489,14 @@ body {
   color: #f5821f;
   font-size: 24px;
   font-weight: bold;
+  font-family: 'MyradPro Bold';
 }
 
 .box-text p {
   color: #4d4d4d;
   font-size: 16px;
   font-weight: bold;
+  font-family: 'MyradPro Bold Cond';
 }
 
 /* -------- Blue Menu -------- */
@@ -434,21 +512,35 @@ body {
 }
 
 .blue-menu h6 {
-  font-weight: 600;
+  font-family: 'MyradPro Bold Cond';
+  font-size: 19px;
 }
 
 .blue-menu li {
   line-height: 1.2;
 }
 
-/* -------- Text Containers -------- */
+.blue-menu li a {
+  color: #fff;
+  font-family: 'MyradPro Condensed';
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+.blue-menu li a:hover {
+  text-decoration: none;
+}
+
+/* -------- White Footer -------- */
 
 .footer {
   padding: 50px 0;
+  font-family: 'MyradPro Condensed';
 }
 
 .footer a {
   color: #000;
+  font-size: 18px;
 }
 
 .footer a:hover {
@@ -486,6 +578,7 @@ body {
     margin-left: auto;
   }
 }
+
 @media (max-width: 999px) {
   .navigation-right {
     background-color: #0061af;
@@ -500,9 +593,6 @@ body {
   .default-nav {
     padding-top: 20px;
   }
-  /*.navigation-right {
-    display: none;
-  }*/
   .gray-container .col-lg-6 {
     margin-bottom: 20px;
   }
@@ -514,6 +604,12 @@ body {
   }
   .blue-menu .col-lg-1 {
     margin-bottom: 20px;
+  }
+  .footer .col-6 {
+    text-align: center;
+  }
+  .footer .col-lg-8 {
+    display: none;
   }
 }
 
@@ -563,9 +659,23 @@ body {
   }
 }
 
-@media (max-width: 370px) {
-  .navbar-brand, .navbar-toggler {
-    margin: 0 auto;
+@media (max-width: 600px) {
+  .navigation-right {
+    font-size: 10px;
+  }
+  .navigation-right .mr-4 {
+    margin-right: 0!important;
+  }
+  .navigation-right .navbar-nav {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+  .language-link .nav-link {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  .sidenav {
+    top: 121px;
   }
 }
 
@@ -591,21 +701,27 @@ body {
 .page-content {
   padding: 50px 0 200px;
 }
+
 .page-content .breadcrumb {
   background-color: transparent;
 }
+
 .page-content .breadcrumb-item {
   font-size: 18px;
 }
+
 .page-content .breadcrumb-item a {
   color: #808080;
 }
+
 .page-content .breadcrumb-item a:hover {
   text-decoration: none;
 }
+
 .page-content .breadcrumb-item+.breadcrumb-item::before {
   content: '>';
 }
+
 .page-content .breadcrumb-item.active {
   color: #ffa70c;
 }
@@ -653,6 +769,7 @@ body {
 #accordion-page .card {
   margin-bottom: 10px;
 }
+
 .accordion-section .accordion-header {
   background: #808080;
   color: #fff;
@@ -678,46 +795,57 @@ body {
   font-weight: bold;
   font-size: 22px;
 }
+
 #accordion-page .col-4 ul {
   list-style: none;
   padding-left: 0;
 }
 
 /* --------------------- Page 3 --------------------- */
+
 .schedule-page .card h4, .schedule-page .card h6 {
-color: #f5821f;
-font-size: 16px;
+  color: #f5821f;
+  font-size: 16px;
 }
+
 .schedule-page .card p span {
-color: #fcaf18;
+  color: #fcaf18;
 }
+
 .schedule-page .card a {
-color: #0061af;
+  color: #0061af;
 }
+
 .schedule-page .card a:hover, .members-page .d-flex a {
   text-decoration: none;
 }
+
 .schedule-page .card a.collapsed, .members-page .d-flex a.collapsed {
   background: none;
 }
 
 /* --------------------- Page 4 --------------------- */
+
 .members-page h5 {
   color: #f5821f;
   font-weight: bold;
   margin-bottom: 40px;
 }
+
 .members-page img {
   height: 100%;
 }
+
 .members-page p {
   color: #000;
 }
+
 .members-page h6 {
   color: #fcaf18;
   font-size: 22px;
   font-weight: bold;
 }
+
 .members-page .collapse-wrap {
   border: 2px solid #bbbdbe;
   padding: 7px;
