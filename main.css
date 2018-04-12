@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'MyradPro';
+  src: url('fonts/MYRIADPRO-REGULAR.OTF');
+}
+
 /* Buttons Font */
 
 @font-face {
@@ -721,6 +727,7 @@ html, body {
   color: #ffa70c;
   font-size: 30px;
   font-weight: 600;
+  font-family: 'MyradPro Bold';
 }
 
 /* -------- Page Content -------- */
@@ -728,6 +735,7 @@ html, body {
 .page-content {
   padding-top: 50px;
   padding-bottom: 200px;
+  font-family: 'MyradPro';
 }
 
 .page-content .breadcrumb {
@@ -735,7 +743,8 @@ html, body {
 }
 
 .page-content .breadcrumb-item {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'MyradPro SemiBold Condensed';
 }
 
 .page-content .breadcrumb-item a {
@@ -764,6 +773,7 @@ html, body {
 .time-and-temp h5 {
   color: #808080;
   font-size: 22px;
+  font-family: 'MyradPro';
 }
 
 .page-content .page-content-text h5 {
@@ -801,7 +811,9 @@ html, body {
 }
 
 /* --------------------- Page 2 & Page 3 --------------------- */
-
+.accordion-section {
+  font-family: 'MyradPro';
+}
 .accordion-section .btn-primary {
   padding: 12px 30px;
 }
@@ -834,6 +846,7 @@ html, body {
   color: #f5821f;
   font-weight: bold;
   font-size: 22px;
+  font-family: 'MyradPro SemiBold Condensed';
 }
 
 #accordion-page .col-4 ul {
@@ -865,11 +878,14 @@ html, body {
 }
 
 /* --------------------- Page 4 --------------------- */
-
+.members-page {
+  font-family: 'MyradPro';
+}
 .members-page h5 {
   color: #f5821f;
-  font-weight: bold;
+  font-size: 24px;
   margin-bottom: 40px;
+  font-family: 'MyradPro SemiBold Condensed';
 }
 
 .members-page img {
@@ -884,6 +900,7 @@ html, body {
   color: #fcaf18;
   font-size: 22px;
   font-weight: bold;
+  font-family: 'MyradPro SemiBold Condensed';
 }
 
 .members-page .collapse-wrap {
