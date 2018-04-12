@@ -9,7 +9,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- For Carousel Swipe -->
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
   <!-- Fonts -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
@@ -24,8 +27,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">FAQ</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-4">
           <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">esp</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">por</a>
+        </li>
+        <li class="nav-item language-link mr-4">
+          <a class="nav-link" href="#">eng</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><span><i class="fab fa-twitter"></i></span></a>
@@ -75,7 +87,7 @@
   <div class="collapse nav-collapse-items" id="nav-item1">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Alacero-58</a>
@@ -93,13 +105,13 @@
             <a href="#">Congresos Anteriores</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <div class="collapse nav-collapse-items" id="nav-item2">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Programa</a>
@@ -126,14 +138,13 @@
             <a href="#">Concurso Arquitectura</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item3">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -148,14 +159,13 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item4">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -170,354 +180,401 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <!-- Main Nav END -->
 
+
+  <div id="mySidenav" class="sidenav">
+    <ul class="navbar-nav text-left">
+      <li class="nav-item">
+        <a class="nav-link pb-0" href="#">
+        X CERRAR
+      </a>
+      </li>
+      <div class="dropdown-divider mt-2"></div>
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+    </ul>
+  </div>
+  <!-- /.sidenav -->
   <nav class="navbar mobile-navbar">
-    <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMobile">
-      <ul class="navbar-nav text-left">
-        <li class="nav-item">
-          <a class="nav-link pb-0" href="#">
-            X CERRAR
-          </a>
-        </li>
-        <div class="dropdown-divider"></div>
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-      </ul>
-    </div>
+    <a class="navbar-brand mr-auto" href="#"><img src="img/logo-2.png" /></a>
+    <span class="navbar-toggler-icon open-close"></span>
   </nav>
   <!--- NAVIGATION END HERE -->
 
-
-  <div class="header-hero">
-    <h2 class="text-center">Alacero-59</h2>
-  </div>
-  <!-- /.header-hero -->
-
-  <div class="container page-content">
-    <div class="row">
-
-      <div class="col-lg-3 youtube-section order-md-3">
-        <h5 class="mb-0">Invitación</h5>
-        <iframe height="180" src="https://www.youtube.com/embed/JZf9TUDYmME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-
-      <div class="col-lg-6 page-content-text order-md-2">
-        <ol class="breadcrumb pl-0">
-          <li class="breadcrumb-item"><a href="#">Congreso</a></li>
-          <li class="breadcrumb-item active">Alacero-59</li>
-        </ol>
-        <p>
-          La Asociación Latinoamericana del Acero -Alacero-, junto a la Comisión Organizadora Mexicana, lo invita a ser parte del encuentro de networking regional más importante del acero y su cadena de valor: Congreso Alacero- 58, reuniendo a los conferencistas
-          y delegados más destacados del sector.
-        </p>
-        <h5>TÍTULO 1</h5>
-        <p>
-          Este año nos reuniremos en el Hotel Paradisus Cancún All Inclusive Resort entre el 06 y 08 de noviembre en la paradisíaca ciudad de Cancún, México. En un tiempo de desafíos para la siderurgia regional y global, Alacero-58 buscará plantear estrategias
-          para superar la crisis actual y afanzar sustentablemente a nuestra industria y a nuestra región en el nuevo orden económico mundial.
-        </p>
-        <h6>Título 2</h6>
-        <p>
-          Alacero ofrecerá a los delegados extranjeros, un 15% descuento por inscripción anticipada hasta el 15 de mayo. En el caso de los delegados que residan y trabajen en México podrán acceder a una tarifa preferencial otorgada por la Comisión Organizadora
-          Mexicana.
-        </p>
-        <p>
-          Asimismo, ya pueden reservar su habitación en Hotel Paradisus Cancún* a tarifas preferenciales en modalidad “todo incluido”, comprendiendo habitación de lujo con terraza, alimentos en todos los centros de consumo del hotel, bebidas, internet, propinas,
-          entretenimiento, room service, mini bar, kit de café en habitación, impuestos.
-        </p>
-      </div>
-      <div class="col-lg-3 order-3 order-md-1">
-        <div class="time-and-temp">
-          <h5 class="text-center">Cartagena de Indias</h5>
-          <p class="text-center">
-            Code goes here.
-          </p>
-        </div>
-        <div class="twitter">
-          <p class="text-center">
-            Tweeter feed goes here.
-          </p>
-        </div>
-      </div> <!-- /.col-lg-3 -->
-
+  <div id="main">
+    <div class="header-hero">
+      <h2 class="text-center">Alacero-59</h2>
     </div>
-  </div>
+    <!-- /.header-hero -->
 
-  <div class="blue-menu">
-    <div class="container">
+    <div class="container page-content">
       <div class="row">
-        <div class="col-lg-1 col-sm-4 col-6 pl-md-0">
-          <h6>CONGRESO</h6>
-          <ul class="pl-0">
-            <li>
-              Alacero-58
-            </li>
-            <li>
-              Sponsors
-            </li>
-            <li>
-              Comisión Organizadora
-            </li>
-            <li>
-              Últimas Novedades
-            </li>
-            <li>
-              Congresos Anteriores
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>ACTIVIDADES</h6>
-          <ul class="pl-0">
-            <li>
-              Programa
-            </li>
-            <li>
-              Conferencistas
-            </li>
-            <li>
-              ExpoAlacero 2018
-            </li>
-            <li>
-              Cena Anual
-            </li>
-            <li>
-              Programa Acompañantes
-            </li>
-            <li>
-              Visitas Industriales
-            </li>
-            <li>
-              Comités y Directorio
-            </li>
-            <li>
-              Concurso Arquitectura
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>INSCRIPCIÓN</h6>
-          <ul class="pl-0">
-            <li>
-              Delegado Extranjero
-            </li>
-            <li>
-              Delegado Local
-            </li>
-            <li>
-              Empresas
-            </li>
-            <li>
-              Participantes
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>SEDE</h6>
-          <ul class="pl-0">
-            <li>
-              Centro de Convenciones
-            </li>
-            <li>
-              Cartagena de Indias
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>ALOJAMIENTO</h6>
-          <ul class="pl-0">
-            <li>
-              Hotel Sede
-            </li>
-            <li>
-              Hotel de Apoyo
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>VIAJE</h6>
-          <ul class="pl-0">
-            <li>
-              Convenio Aéreo
-            </li>
-            <li>
-              Traslado Aeropuerto/
-            </li>
-            <li>
-              Hotel
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-1 col-sm-4 col-6">
-          <h6>PRENSA</h6>
-          <ul class="pl-0">
-            <li>
-              Inscripción
-            </li>
-            <li>
-              Comunicados
-            </li>
-            <li>
-              de Prensa
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-6">
-          <img src="img/logo.png" />
+        <div class="col-lg-3 youtube-section order-md-3">
+          <h5 class="mb-0">Invitación</h5>
+          <iframe height="180" src="https://www.youtube.com/embed/JZf9TUDYmME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <!-- /.col-lg-8 -->
-        <div class="col-lg-4 col-6 text-right">
-          <div class="row">
-            <div class="col-6">
-              <a href="#">alacero.org</a>
-            </div>
-            <div class="col-6">
-              <p class="mb-0">
-                <a href="">congreso@alacero.org</a>
-              </p>
-              <p>
-                <a href="#">alacero@alacero.org</a>
-              </p>
-            </div>
+
+        <div class="col-lg-6 page-content-text order-md-2">
+          <ol class="breadcrumb pl-0">
+            <li class="breadcrumb-item"><a href="#">Congreso</a></li>
+            <li class="breadcrumb-item active">Alacero-59</li>
+          </ol>
+          <button class="btn btn-secondary" id="btn-decrease"><i class="fas fa-minus"></i></button>
+          <button class="btn btn-secondary" id="btn-increase"><i class="fas fa-plus"></i></button>
+          <div class="mt-4">
+            <p>
+              La Asociación Latinoamericana del Acero -Alacero-, junto a la Comisión Organizadora Mexicana, lo invita a ser parte del encuentro de networking regional más importante del acero y su cadena de valor: Congreso Alacero- 58, reuniendo a los conferencistas
+              y delegados más destacados del sector.
+            </p>
+            <h5>TÍTULO 1</h5>
+            <p>
+              Este año nos reuniremos en el Hotel Paradisus Cancún All Inclusive Resort entre el 06 y 08 de noviembre en la paradisíaca ciudad de Cancún, México. En un tiempo de desafíos para la siderurgia regional y global, Alacero-58 buscará plantear estrategias
+              para superar la crisis actual y afanzar sustentablemente a nuestra industria y a nuestra región en el nuevo orden económico mundial.
+            </p>
+            <h6>Título 2</h6>
+            <p>
+              Alacero ofrecerá a los delegados extranjeros, un 15% descuento por inscripción anticipada hasta el 15 de mayo. En el caso de los delegados que residan y trabajen en México podrán acceder a una tarifa preferencial otorgada por la Comisión Organizadora
+              Mexicana.
+            </p>
+            <p>
+              Asimismo, ya pueden reservar su habitación en Hotel Paradisus Cancún* a tarifas preferenciales en modalidad “todo incluido”, comprendiendo habitación de lujo con terraza, alimentos en todos los centros de consumo del hotel, bebidas, internet, propinas,
+              entretenimiento, room service, mini bar, kit de café en habitación, impuestos.
+            </p>
           </div>
         </div>
-        <!-- /.col-lg-4 -->
+        <div class="col-lg-3 order-3 order-md-1">
+          <div class="time-and-temp">
+            <h5 class="text-center">Cartagena de Indias</h5>
+            <p class="text-center">
+              Code goes here.
+            </p>
+          </div>
+          <div class="twitter">
+            <p class="text-center">
+              Tweeter feed goes here.
+            </p>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
       </div>
-      <!-- /.row -->
     </div>
-  </footer>
+
+    <div class="blue-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1 col-sm-4 col-6 pl-md-0">
+            <h6>CONGRESO</h6>
+            <ul class="pl-0">
+              <li>
+                Alacero-58
+              </li>
+              <li>
+                Sponsors
+              </li>
+              <li>
+                Comisión Organizadora
+              </li>
+              <li>
+                Últimas Novedades
+              </li>
+              <li>
+                Congresos Anteriores
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>ACTIVIDADES</h6>
+            <ul class="pl-0">
+              <li>
+                Programa
+              </li>
+              <li>
+                Conferencistas
+              </li>
+              <li>
+                ExpoAlacero 2018
+              </li>
+              <li>
+                Cena Anual
+              </li>
+              <li>
+                Programa Acompañantes
+              </li>
+              <li>
+                Visitas Industriales
+              </li>
+              <li>
+                Comités y Directorio
+              </li>
+              <li>
+                Concurso Arquitectura
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>INSCRIPCIÓN</h6>
+            <ul class="pl-0">
+              <li>
+                Delegado Extranjero
+              </li>
+              <li>
+                Delegado Local
+              </li>
+              <li>
+                Empresas
+              </li>
+              <li>
+                Participantes
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>SEDE</h6>
+            <ul class="pl-0">
+              <li>
+                Centro de Convenciones
+              </li>
+              <li>
+                Cartagena de Indias
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>ALOJAMIENTO</h6>
+            <ul class="pl-0">
+              <li>
+                Hotel Sede
+              </li>
+              <li>
+                Hotel de Apoyo
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>VIAJE</h6>
+            <ul class="pl-0">
+              <li>
+                Convenio Aéreo
+              </li>
+              <li>
+                Traslado Aeropuerto/
+              </li>
+              <li>
+                Hotel
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-1 col-sm-4 col-6">
+            <h6>PRENSA</h6>
+            <ul class="pl-0">
+              <li>
+                Inscripción
+              </li>
+              <li>
+                Comunicados
+              </li>
+              <li>
+                de Prensa
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-6">
+            <img src="img/logo.png" />
+          </div>
+          <!-- /.col-lg-8 -->
+          <div class="col-lg-4 col-6 text-right">
+            <div class="row">
+              <div class="col-6">
+                <a href="#">alacero.org</a>
+              </div>
+              <div class="col-6">
+                <p class="mb-0">
+                  <a href="">congreso@alacero.org</a>
+                </p>
+                <p>
+                  <a href="#">alacero@alacero.org</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </footer>
+  </div>
+  <!-- /.main -->
+
+  <!-- Increase/Decrease Font size -->
+  <script>
+    var $affectedElements = $(".page-content-text, .page-content-text h5, .page-content-text h6");
+
+    $affectedElements.each(function() {
+      var $this = $(this);
+      $this.data("orig-size", $this.css("font-size"));
+    });
+
+    $("#btn-increase").click(function() {
+      changeFontSize(1);
+    })
+
+    $("#btn-decrease").click(function() {
+      changeFontSize(-1);
+    })
+
+    function changeFontSize(direction) {
+      $affectedElements.each(function() {
+        var $this = $(this);
+        $this.css("font-size", parseInt($this.css("font-size")) + direction);
+      });
+    }
+  </script>
+
+  <!-- SLide in Navbar -->
+  <script>
+    $('.open-close').on('click', function() {
+      $(this).children().toggleClass('active');
+      $('#mySidenav').toggleClass('active');
+      $('#main').toggleClass('active-content');
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $(".sidenav").height($("#main").height());
+    });
+  </script>
+
 </body>
 
 </html>

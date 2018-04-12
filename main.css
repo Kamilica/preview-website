@@ -31,12 +31,14 @@
   src: url('fonts/MYRIADPRO-BLACKCOND.OTF');
 }
 
-body, html {
-  overflow-x: hidden;
+body {
+  height: 100%;
 }
 
-body {
-  font-family: 'MyradPro SemiCondensed';
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* -------- Navigation -------- */
@@ -170,14 +172,19 @@ body {
 
 #main {
   transition: margin-left .5s;
-  position: static;
+  height: 100%;
 }
+
+.mobile-navbar {
+  background: #fff;
+}
+
 .mobile-navbar .navbar-brand img {
   max-height: 50px;
 }
 
 .sidenav {
-  height: auto;
+  height: 100%;
   width: 0;
   position: absolute;
   z-index: 1;
@@ -255,6 +262,10 @@ body {
   height: 20px;
   border-radius: 100%;
   background-color: #f5821f;
+}
+
+.carousel-indicators li:hover {
+  cursor: pointer;
 }
 
 .carousel-indicators li:not(:last-child) {
@@ -534,8 +545,11 @@ body {
 /* -------- White Footer -------- */
 
 .footer {
-  padding: 50px 0;
   font-family: 'MyradPro Condensed';
+}
+
+.footer .container {
+  padding: 50px 0;
 }
 
 .footer a {
@@ -582,11 +596,24 @@ body {
 @media (max-width: 999px) {
   .navigation-right {
     background-color: #0061af;
+    /*position: fixed;
+    width: 100%;
+    z-index: 99999999;*/
   }
   .navigation-right .navbar-nav {
     margin-left: auto;
     margin-right: auto;
   }
+  /*.mobile-navbar {
+    margin-top: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999999999;
+    z-index: 99999999;
+  }
+  #main {
+    margin-top: 125px;
+  }*/
 }
 
 @media (max-width: 992px) {
@@ -699,7 +726,8 @@ body {
 /* -------- Page Content -------- */
 
 .page-content {
-  padding: 50px 0 200px;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
 
 .page-content .breadcrumb {
@@ -742,6 +770,18 @@ body {
   color: #f5821f;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.page-content .btn-secondary {
+  background: #ccc;
+  border: 1px solid #999999;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 0;
+}
+
+.page-content .btn-secondary:focus {
+  box-shadow: none;
 }
 
 .page-content .page-content-text p {

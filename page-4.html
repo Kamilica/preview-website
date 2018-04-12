@@ -9,7 +9,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- For Carousel Swipe -->
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
   <!-- Fonts -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
@@ -24,8 +27,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">FAQ</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-4">
           <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">esp</a>
+        </li>
+        <li class="nav-item language-link mr-2">
+          <a class="nav-link" href="#">por</a>
+        </li>
+        <li class="nav-item language-link mr-4">
+          <a class="nav-link" href="#">eng</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><span><i class="fab fa-twitter"></i></span></a>
@@ -75,7 +87,7 @@
   <div class="collapse nav-collapse-items" id="nav-item1">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Alacero-58</a>
@@ -93,13 +105,13 @@
             <a href="#">Congresos Anteriores</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <div class="collapse nav-collapse-items" id="nav-item2">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Programa</a>
@@ -126,14 +138,13 @@
             <a href="#">Concurso Arquitectura</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item3">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -148,14 +159,13 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
-
   <div class="collapse nav-collapse-items" id="nav-item4">
     <div class="container">
       <div class="d-flex flex-row">
-      <img src="img/logo-2.png" />
+        <img src="img/logo-2.png" />
         <ul>
           <li>
             <a href="#">Delegado Extranjero</a>
@@ -170,149 +180,149 @@
             <a href="#">Participantes</a>
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
   <!-- Main Nav END -->
 
+
+  <div id="mySidenav" class="sidenav">
+    <ul class="navbar-nav text-left">
+      <li class="nav-item">
+        <a class="nav-link pb-0" href="#">
+        X CERRAR
+      </a>
+      </li>
+      <div class="dropdown-divider mt-2"></div>
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link py-0" href="#">
+        CONGRESO
+      </a>
+        <ul>
+          <li>
+            <a href="#">Alacero-59</a>
+          </li>
+          <li>
+            <a href="#">Sponsors</a>
+          </li>
+          <li>
+            <a href="#">Comisión Organizadora</a>
+          </li>
+          <li>
+            <a href="#">Últimas Novedades</a>
+          </li>
+          <li>
+            <a href="#">Congresos Anteriores</a>
+          </li>
+        </ul>
+      </li>
+      <!-- /.nav-item -->
+    </ul>
+  </div>
+  <!-- /.sidenav -->
   <nav class="navbar mobile-navbar">
-    <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMobile">
-      <ul class="navbar-nav text-left">
-        <li class="nav-item">
-          <a class="nav-link pb-0" href="#">
-            X CERRAR
-          </a>
-        </li>
-        <div class="dropdown-divider"></div>
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-
-        <li class="nav-item mb-3">
-          <a class="nav-link py-0" href="#">
-            CONGRESO
-          </a>
-          <ul>
-            <li>
-              <a href="#">Alacero-59</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Comisión Organizadora</a>
-            </li>
-            <li>
-              <a href="#">Últimas Novedades</a>
-            </li>
-            <li>
-              <a href="#">Congresos Anteriores</a>
-            </li>
-          </ul>
-        </li>
-        <!-- /.nav-item -->
-      </ul>
-    </div>
+    <a class="navbar-brand mr-auto" href="#"><img src="img/logo-2.png" /></a>
+    <span class="navbar-toggler-icon open-close"></span>
   </nav>
   <!--- NAVIGATION END HERE -->
 
+<div id="main">
   <div class="header-hero">
     <h2 class="text-center">Conferencistas</h2>
   </div>
@@ -322,17 +332,21 @@
     <div class="row">
 
       <div class="col-lg-9 accordion-section members-page order-md-2">
+        <ol class="breadcrumb pl-0 mb-0">
+          <li class="breadcrumb-item"><a href="#">Actividades</a></li>
+          <li class="breadcrumb-item active">Conferencistas</li>
+        </ol>
         <div class="d-flex justify-content-between">
-          <ol class="breadcrumb pl-0">
-            <li class="breadcrumb-item"><a href="#">Actividades</a></li>
-            <li class="breadcrumb-item active">Conferencistas</li>
-          </ol>
-
+          <div class="d-flex align-items-center">
+            <button class="btn btn-secondary mr-1" id="btn-decrease"><i class="fas fa-minus"></i></button>
+            <button class="btn btn-secondary" id="btn-increase"><i class="fas fa-plus"></i></button>
+          </div>
           <div>
             <a href="#" class="btn btn-primary border-0 mb-3">VER PROGRAMA</a>
           </div>
         </div>
 
+        <div class="conference-page">
         <h5>PANEL I | ECONOMÍA: LA PERSPECTIVA ECONÓMICA EN TIEMPOS DE<br /> INCERTIDUMBRE POLÍTICA</h5>
 
         <div class="d-flex justify-content-start mb-4">
@@ -425,6 +439,7 @@
           </div>
         </div> <!-- image box end -->
       </div>
+    </div>
 
       <div class="col-lg-3 order-md-1">
         <div class="time-and-temp">
@@ -593,6 +608,47 @@
       <!-- /.row -->
     </div>
   </footer>
-</body>
+  <!-- /#main -->
+  <!-- Increase/Decrease Font size -->
+  <script>
+    var $affectedElements = $(".conference-page, .conference-page h5, .conference-page h6");
 
-</html>
+    $affectedElements.each(function() {
+      var $this = $(this);
+      $this.data("orig-size", $this.css("font-size"));
+    });
+
+    $("#btn-increase").click(function() {
+      changeFontSize(1);
+    })
+
+    $("#btn-decrease").click(function() {
+      changeFontSize(-1);
+    })
+
+    function changeFontSize(direction) {
+      $affectedElements.each(function() {
+        var $this = $(this);
+        $this.css("font-size", parseInt($this.css("font-size")) + direction);
+      });
+    }
+  </script>
+
+  <!-- SLide in Navbar -->
+  <script>
+    $('.open-close').on('click', function() {
+      $(this).children().toggleClass('active');
+      $('#mySidenav').toggleClass('active');
+      $('#main').toggleClass('active-content');
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $(".sidenav").height($("#main").height());
+    });
+  </script>
+
+  </body>
+
+  </html>
