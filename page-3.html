@@ -188,12 +188,6 @@
 
   <div id="mySidenav" class="sidenav">
     <ul class="navbar-nav text-left">
-      <li class="nav-item">
-        <a class="nav-link pb-0" href="#">
-        X CERRAR
-      </a>
-      </li>
-      <div class="dropdown-divider mt-2"></div>
       <li class="nav-item mb-3">
         <a class="nav-link py-0" href="#">
         CONGRESO
@@ -316,13 +310,14 @@
     </ul>
   </div>
   <!-- /.sidenav -->
-  <nav class="navbar mobile-navbar">
-    <a class="navbar-brand mr-auto" href="#"><img src="img/logo-2.png" /></a>
-    <span class="navbar-toggler-icon open-close"></span>
-  </nav>
-  <!--- NAVIGATION END HERE -->
-
   <div id="main">
+    <nav class="navbar mobile-navbar">
+      <a class="navbar-brand mr-auto" href="#"><img src="img/logo-2.png" /></a>
+      <a class="open-close"><span class="navbar-toggler-icon"></span></a>
+    </nav>
+    <!--- NAVIGATION END HERE -->
+
+
     <div class="header-hero">
       <h2 class="text-center">Programa</h2>
     </div>
@@ -652,6 +647,7 @@
       $(this).children().toggleClass('active');
       $('#mySidenav').toggleClass('active');
       $('#main').toggleClass('active-content');
+      $('.open-close').toggleClass('active-navbar-toggler');
     });
   </script>
 
