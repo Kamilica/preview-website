@@ -176,7 +176,7 @@ html, body {
 }
 
 .active-navbar-toggler {
-  margin-right: 240px;
+  margin-right: 255px;
 }
 
 #main {
@@ -231,7 +231,7 @@ html, body {
 }
 
 .sidenav .nav-item {
-  padding-left: 10px;
+  padding-left: 15px;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 1px;
@@ -713,6 +713,9 @@ html, body {
   .language-link .nav-link {
     margin-top: 5px;
     font-size: 10px;
+  }
+  .sidenav {
+    top: 50px;
   }
 }
 
